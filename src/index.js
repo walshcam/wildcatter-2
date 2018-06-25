@@ -13,7 +13,7 @@ import {
 import './index.css';
 
 // Pages
-import Schematic from '/pages/schematic/Schematic';
+import Schematic from './pages/Schematic/Schematic';
 
 
 //==================================================================================
