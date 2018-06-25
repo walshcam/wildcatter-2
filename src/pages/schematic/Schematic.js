@@ -36,6 +36,9 @@ class Schematic extends Component {
                     data[cellInfo.index][cellInfo.column.id] = event.target.innerHTML;
                     this.setState({ data });
                 }}
+                dangerouslySetInnerHTML = {{
+                    __html: this.state.data[cellInfo.index][cellInfo.column.id]
+                }}
             />
         )
     }
