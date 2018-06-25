@@ -15,11 +15,13 @@ const SchematicTable = (props) => (
                     columns: [
                         {
                             Header: "Min Depth",
-                            accessor: "minDepth"
+                            accessor: "minDepth",
+                            Cell: props.renderEditable
                         },
                         {
                             Header: "Max Depth",
-                            accessor: "maxDepth"
+                            accessor: "maxDepth",
+                            Cell: props.renderEditable
                         }
                     ]    
                 },
@@ -28,15 +30,18 @@ const SchematicTable = (props) => (
                     columns: [
                         {
                             Header: "OD",
-                            accessor: "od"
+                            accessor: "od",
+                            Cell: props.renderEditable
                         },
                         {
                             Header: "Weight",
-                            accessor: "weight"
+                            accessor: "weight",
+                            Cell: props.renderEditable
                         },
                         {
                             Header: "ID",
-                            accessor: "id"
+                            accessor: "id",
+                            Cell: props.renderEditable
                         }
                     ]
                 },
@@ -45,7 +50,8 @@ const SchematicTable = (props) => (
                     columns: [
                         {
                             Header: "Description",
-                            accessor: "description"
+                            accessor: "description",
+                            Cell: props.renderEditable
                         }
                     ]
                 }
