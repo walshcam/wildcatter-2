@@ -1,13 +1,16 @@
 //==================================================================================
 // The Editable Schematic Table
 //==================================================================================
-import React, { Fragment } from 'react';
+import React from 'react';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
 
+
+
 const SchematicTable = (props) => (
-    <Fragment>
-        <ReactTable 
+    <div style = {{ height: `${props.height}`, width: `${props.width}` }}>
+        <ReactTable
+            rows 
             data = { props.data }
             columns = {[
                 {
@@ -58,7 +61,7 @@ const SchematicTable = (props) => (
             ]}
             className = "-striped -highlight"
         />
-    </Fragment>
+    </div>
 );
 
 export default SchematicTable;
