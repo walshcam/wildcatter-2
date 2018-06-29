@@ -115,6 +115,15 @@ class Schematic extends Component {
         event.preventDefault();
         //add new data to the state
         const data = [...this.state.data];
+        console.log(data);
+        data.push({
+            minDepth: this.state.wellboreForm.minDepth.value,
+            maxDepth: this.state.wellboreForm.maxDepth.value,
+            od: this.state.wellboreForm.od.value,
+            weight: this.state.wellboreForm.weight.value,
+            id: this.state.wellboreForm.id.value,
+            description: this.state.wellboreForm.description.value
+        });
         this.setState({
             data: data
         })
