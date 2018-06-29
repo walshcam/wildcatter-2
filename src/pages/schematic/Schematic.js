@@ -24,6 +24,13 @@ class Schematic extends Component {
             weight: 6,
             id: 1.125,
             description: "this is also a description"
+        },{
+            minDepth: 5,
+            maxDepth: 209,
+            od: 2.125,
+            weight: 2,
+            id: 1.125,
+            description: "a description"
         }],
         // Form Data
         wellboreForm: {
@@ -107,18 +114,7 @@ class Schematic extends Component {
     formHandler = (event) => {
         event.preventDefault();
         //add new data to the state
-        let data = [...this.state.data];
-        console.log(data);
-        const newData = {
-            minDepth: this.state.wellboreForm.minDepth.value,
-            maxDepth: this.state.wellboreForm.maxDepth.value,
-            od: this.state.wellboreForm.od.value,
-            weight: this.state.wellboreForm.weight.value,
-            id: this.state.wellboreForm.id.value,
-            description: this.state.wellboreForm.description.value
-        };
-        data = data.push(newData);
-        console.log(data);
+        const data = [...this.state.data];
         this.setState({
             data: data
         })
