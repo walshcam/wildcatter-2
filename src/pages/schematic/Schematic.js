@@ -121,16 +121,15 @@ class Schematic extends Component {
         console.log(data);
         this.setState({
             data: data
-        }).then( () => {
-            //clear out field
-            let wellboreForm = {...this.state.wellboreForm}
-            for (let formElementIdentifier in wellboreForm) {
-                wellboreForm[formElementIdentifier].value = '';
-            }
+        })
+        //clear out field
+        let wellboreForm = {...this.state.wellboreForm}
+        for (let formElementIdentifier in wellboreForm) {
+            wellboreForm[formElementIdentifier].value = '';
+        }
 
-            this.setState( {
-                wellboreForm: wellboreForm
-            })
+        this.setState( {
+            wellboreForm: wellboreForm
         })
     }
 
@@ -182,8 +181,6 @@ class Schematic extends Component {
                     <SchematicTable 
                         renderEditable = { this.renderEditable }
                         data = { this.state.data }
-                        height = {"200px"}
-                        width = {"50%"}
                     />
                 </div>
                 <div>
